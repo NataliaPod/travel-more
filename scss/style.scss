@@ -1,0 +1,296 @@
+$primary_color: #5474fd;
+$primary_font_color: #fff;
+$primary_font_family: 'Josefin Sans', sans-serif;
+
+@import "normalize";
+@import "layout";
+@import "elements";
+
+@import 'fonts';
+
+body{
+	font: 400 16px/1.6 $primary_font_family;
+	border: 15px solid #fff;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1112px;
+}
+
+.ba-header{
+	background: url(../img/bg_main.png) no-repeat center;
+	background-size: cover;
+	height: 100vh;
+}
+
+.ba-section-intro{
+	&__inner{
+		text-align: center;
+		padding: 250px 0 0;
+	}
+
+	&__scroll{
+		display: block;
+		color: #fff;
+		align-items: center;
+		margin-bottom: 120px;
+	}
+}
+
+.ba-logo__img{
+	display: block;
+}
+
+.ba-search-form{
+	display: flex;
+	position: relative;
+	margin-top: 50px;
+	max-width: 650px;
+	align-items: center;
+}
+
+.ba-search-form [type="search"]{
+	height: 61px;
+	width: 100%;
+	padding: 19px 123px;
+	box-sizing: border-box;
+	font: 400 14px/1.8 $primary_font_family;
+	letter-spacing: 0.2em;
+	color: #999999;
+	outline: none;
+	margin-bottom: 120px;
+
+	&:focus{
+		opacity: .8;
+
+		&::placeholder{
+			color: $primary_color;
+			transition: color 0.3s;
+		}
+	}
+}
+
+.ba-search-btn{
+	position: absolute;
+	width: 150px;
+	height: 59px;
+	background: $primary_color;
+	color: #fff;
+	top: 1px;
+	right: 1px;
+	font: 400 14px/1.8 Aleo, sans-serif;
+	letter-spacing: 0.1em;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid currentColor;
+
+	& > svg{
+		margin-left: 13px;
+		fill: #fff;
+	}
+
+	&:hover{
+		background-color: initial;
+		border-color: $primary_color;
+		color: $primary_color;
+
+		& > svg{
+			fill: $primary_color;
+		}
+	}
+}
+
+.ba-nav{
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 80px;
+		background: $primary_color;
+		width: 100%;
+	
+	&__list{
+		margin: 0;
+		padding: 0;
+		display: flex;
+		align-items:  center;
+		list-style: none;
+	}
+
+	&__item{
+		padding-left: 38px;
+		line-height: 1;
+	}
+
+	&__link{
+		color: #fff;
+		font: 400 14px/1.6 Aleo, sans-serif;
+		text-decoration: none;
+		text-transform: uppercase;
+		display: block;
+
+		&:hover{
+			text-decoration: none;
+			color: $primary_color;
+			text-shadow: 1px 1px 2px #fff;
+		}
+	}
+}
+
+.ba-whoweare{
+	background: url(../img/secont_img_section.png) no-repeat center;
+	background-size: cover;
+	height: 100vh;
+
+	&__wrapicon{
+		background: #333333;
+	}
+
+	&__title{
+		padding-top: 150px;
+	}
+
+	&__img{
+		max-width: 50%;
+		position: relative;
+
+		&--first{
+			position: absolute;
+			top: 120px;
+			left: 66px;
+		}
+
+		&--second{
+			top: 345px;
+			left: 192px;
+			position: inherit;
+		}
+	}
+}
+
+.ba-btn{
+	text-decoration: none;
+	height: 59px;
+	background: $primary_color;
+	color: $primary_font_color;
+	padding: 19px 38px;
+	text-align: center;
+	border: 2px solid $primary_color;
+
+	&:hover{
+		color: $primary_color;
+		background: #fff;
+		opacity: .7;
+	}
+}
+
+.ba-howitworks{
+	background: #333333;
+	color: $primary_font_color;
+	font: 400 36px/1.6 Aleo, sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__card{
+		text-align: center;
+		display: block;
+		padding: 75px 30px 50px;
+		max-width: 349px;
+		margin: 0 auto 40px;
+	}
+}
+
+.ba-examples{
+	background: url(../img/third_img_section.png) no-repeat center;
+	background-size: cover;
+
+	&__second{
+		background: url(../img/fourth_img_section.png) no-repeat center;
+		background-size: cover;	
+	}
+
+	&__row{
+		padding: 230px 0 100px;
+	}
+
+	&__title{
+		font: 400 20px/0.7 $primary_font_family;
+		letter-spacing: 0;
+		color: $primary_font_color;
+	}
+
+	&__desc{
+		font-size: 16px;
+	}
+}
+
+.ba-card{
+	width: 50%;
+	background: #272322;
+	opacity: .9;
+	padding: 50px 30px;
+}
+
+.ba-aboutus{
+	background: url(../img/bg_footer.png) no-repeat center;
+	background-size: cover;
+
+	&__title{
+		padding-top: 110px;
+		padding-bottom: 98px;
+	}
+
+	&__img{
+		display: block;
+	}
+
+	&__card{
+		background: #333333;
+		display: flex;
+	}
+}
+
+.ba-card{
+
+	&__title{
+		text-transform: uppercase;
+	}
+
+	&__desc{
+		padding: 50px 54px 48px 60px;
+	}
+}
+
+.ba-footer{
+	background: #232323;
+	text-align: center;
+	padding-bottom: 50px;
+
+	&__about{
+		padding-top: 120px;
+	}
+
+	&__desc{
+		color: $primary_font_color;
+		margin-bottom: 30px;
+	}
+
+	&__socials{
+		a + a{
+			margin-left: 23px;
+		}
+
+		svg{
+            fill: $primary_font_color;
+        }
+	}
+}
+
+.ba-hidden{
+	display: none;
+}
